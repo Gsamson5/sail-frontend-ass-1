@@ -651,6 +651,7 @@ h3 {
     background-repeat: no-repeat;
     background-size: contain;
     object-fit: contain;
+    overflow-x: hidden;
 
   }
   
