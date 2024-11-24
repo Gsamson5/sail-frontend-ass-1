@@ -649,7 +649,7 @@ h3 {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.81) 0%, rgba(72, 72, 72, 0) 20.25%, rgba(158, 158, 158, 0) 79.6%, #FFFFFF 85.42%), url("../images/background-image.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     object-fit: contain;
 
   }
