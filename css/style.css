@@ -638,6 +638,7 @@ h3 {
 @media only screen and (min-width: 400px) and (max-width: 600px) {
   /* HEADER */
   body {
+    background-color: #8A79DF;
    width: 100%;
    overflow-x: hidden;
    padding: 10px;
