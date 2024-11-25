@@ -6,6 +6,7 @@
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
 }
 
 /* HEADER SECTION */
@@ -30,20 +31,15 @@ body {
   height: 60px;
 }
 
-.header-nav-logo-2 {
+.header-nav-logo-2, .header-nav-logo-3 {
   width: 36px;
   height: 36px;
 }
 
-.header-nav-logo-3 {
-  width: 48px;
-  height: 48px;
-}
-
 .header-nav-menus {
-  width: 382px;
+  /* width: 382px;
   height: 27px;
-  margin-right: 20px;
+  margin-right: 20px; */
   display: flex;
   justify-content: space-between;
   color: #fff;
@@ -54,6 +50,7 @@ body {
   font-weight: 500;
   text-decoration: none;
   list-style: none;
+  margin: 0 15px;
 }
 
 a {
@@ -125,9 +122,11 @@ a {
 
 .service-card-container {
   width: 100%;
-  height: 250px;
+  height: auto;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
   align-items: center;
 }
 .service-header {
@@ -141,6 +140,9 @@ a {
   height: 200px;
   padding: 25px;
   margin: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: #f9f9f9;
   box-shadow: 2px 2px 1px rgb(155, 148, 148);
 }
@@ -150,9 +152,13 @@ a {
 }
 
 .service-card h3 {
-  color: #000000;
   padding: 10px;
   font-size: 20px;
+}
+
+.service-card img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ARTICLE 1 SECTION  */
@@ -635,22 +641,14 @@ h3 {
 
 @media only screen and (max-width: 600px) {
   /* HEADER */
-  body {
+  /* body {
    overflow-x: hidden;
    padding: 10px;
-  }
+  } */
 
   .header {
-    width: 100%;
     height: 80vh;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0.81) 0%, rgba(72, 72, 72, 0) 20.25%, rgba(158, 158, 158, 0) 79.6%, #FFFFFF 85.42%), url("../images/background-image.png") center/cover no-repeat fixed;
-    /* overflow-x: hidden; */
-
-  }
-  
-  .header-nav {
-    width: 400px;
-  
+    background-size: cover;
   }
   
   .header-nav-logo-1 {
@@ -662,10 +660,11 @@ h3 {
     display: block;
     width: 30px;
     height: 30px;
-    margin-left: 300px;
+    margin-left: auto;
     background-color: white;
     border-radius: 50%;
     translate: all .3s;
+    cursor: pointer;
   }
 
   .harmb-btn:hover {
@@ -684,33 +683,40 @@ h3 {
   
   .header-nav-menus {
    display: none;
-  
+   flex-direction: column;
+   width: 100%;
   }
+
+  .header-nav-menus li {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+   }
+
+
   
   .head-text {
-    width: 300px;
-    margin: 80px;
+    width: 80%;
     margin-top: 30px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 30px;
-    padding: 0px 10px;
+    font-size: 30px;
   }
   
   .head-paragh {
-    width: 250px;
+    width: 80%;
+    font-size: 14px;
+    margin: 10px auto;
+    /* width: 80%;
     margin: 0px 100px;
     padding: 0px 10px;
-    font-size: 10px;
-    line-height: 15px;
+    font-size: 14px;
+    line-height: 15px; */
   }
   
   .head-btn {
-    margin: 50px 180px;
+    margin: 50px auto;
     display: block;
-    padding: 10px;
-    width: 100px;
-    height: 30px;
+    width: 30%;
+    height: auto;
   }
   
   .btn {
@@ -731,31 +737,29 @@ h3 {
   }
   
   .service-card-container {
-    width: 100%;
-    height: 800px;
-    display: flex;
     flex-direction: column;
+    gap: 20px;
+
   }
 
   .service-card {
-    width: 300px;
-    height: 200px;
-    padding: 25px;
-    margin: 20px;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    
    
   }
   
   .service-card h3 {
-    color: #000000;
-    padding: 10px;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   /* ARTICLE 1 SECTION  */
 
 .article-section-1 {
-  width: 400px;
+  width: 100%;
   height: 950px;
+  
 }
 
 .article-section-1-bg {
@@ -858,7 +862,7 @@ h3 {
 /* ARTICLE 4 */
 
 .article-section-4 {
-  width: 400px;
+  width: 100%;
   height: 650px;
   position: relative;
 }
@@ -922,7 +926,7 @@ h3 {
 /* ARTICLE 5 */
 
 .article-section-5 {
-  width: 400px;
+  width: 100%;
   height: 500px;
   background-image: url("../images/Rectangle\ 32.png");
   padding: 50px;
@@ -957,7 +961,7 @@ h3 {
 
 /* ARICLE 6 */
 .article-section-6 {
-  width: 400px;
+  width: 100%;
   margin: 50px;
   background: #fff url("../images/Group\ 78.png") no-repeat center;
   position: relative;
@@ -993,7 +997,7 @@ h3 {
 /* FOOTER SECTION */
 
 .footer-section {
-  width: 450px;
+  width: 100%;
   background-color: #fff;
   padding: 0px 50px;
   margin: 0 auto;
@@ -1029,11 +1033,7 @@ h3 {
 @media only screen and (min-width: 601px) and (max-width: 768px) {
 
   /* HEADER */
-  body {
-    width: 100%;
-    overflow-x: hidden;
-    padding: 10px;
-   }
+
  
    .header {
      width: 100%;
@@ -1312,8 +1312,8 @@ h3 {
  /* ARTICLE 5 */
  
  .article-section-5 {
-   width: 520px;
-   height: 500px;
+  width: 100%;
+   height: auto;
    background-image: url("../images/Rectangle\ 32.png");
    padding: 50px;
    margin: 0px 30px;
@@ -1321,8 +1321,8 @@ h3 {
  }
  
  .article-section-5 h2 {
-   width: 400px;
-      text-align: center;
+   width: 100%;
+  text-align: center;
    font-size: 25px;
    font-weight: 700;
  }
